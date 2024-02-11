@@ -1,4 +1,3 @@
-<?php include 'database.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Ecommerce Price  Comparison Website</title>
+  <title>Logis Bootstrap Template - Index</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -30,7 +29,13 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  
+  <!-- =======================================================
+  * Template Name: Logis
+  * Updated: Jan 29 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
@@ -42,20 +47,37 @@
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Ecommerce</h1>
+        <h1>Logis</h1>
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href=#hero class="active">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href=#services>Services</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="pricing.html">Pricing</a></li>
-</ul>
-             
-          
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="get-a-quote" href="get-a-quote.html">Get a Quote</a></li>
+        </ul>
       </nav><!-- .navbar -->
 
     </div>
@@ -67,74 +89,44 @@
     <div class="container">
       <div class="row gy-4 d-flex justify-content-between">
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h2 data-aos="fade-up">Ecommerce Price Comparison website Using Web Scrapping</h2>
-          <p data-aos="fade-up" data-aos-delay="100">Price Comparison Tool : Here you can compare prices of a product on various e-commerce platforms.</p>
-          <!DOCTYPE html>
+          <h2 data-aos="fade-up">Your Lightning Fast Delivery Partner</h2>
+          <p data-aos="fade-up" data-aos-delay="100">Facere distinctio molestiae nisi fugit tenetur repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit</p>
 
-<body>
-    <h1>Search in our dataset:</h1>
-    <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
-        <input type="text" id="searchInput" class="form-control" placeholder="Enter your product">
-        <button type="submit" class="btn btn-primary">Search</button>
-    </form>
-    <section id = "results">
-    <div id="results" style="background-color: #f2f2f2; padding: 10px;"></div>
-    <div id="results"></div>
-    <div id="resultDetails" class="mt-3"></div>
-
-    </section>
-
-    <script>
-        const dataset = [
-            { id: 1, name: 'Item 1', description: 'Description for Item 1', price: '$50' },
-            { id: 2, name: 'Item 2', description: 'Description for Item 2' ,price: '$89'},
-            { id: 3, name: 'Item 3', description: 'Description for Item 3',price:'$56' },
-            // ...
-        ];
-
-        function searchData(event) {
-            event.preventDefault(); // Prevent the form from submitting
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const results = document.getElementById('results');
-            const resultDetails = document.getElementById('resultDetails');
-
-            results.innerHTML = '';
-            resultDetails.innerHTML = '';
-
-            if (searchTerm === '') {
-                results.innerHTML = 'Please enter a search term.';
-                return;
-            }
-
-            const matchingData = dataset.filter(item => item.name.toLowerCase().includes(searchTerm));
-
-            if (matchingData.length === 0) {
-                results.innerHTML = `No results found for '${searchTerm}'.`;
-                return;
-            }
-
-            let output = '<ul>';
-
-            matchingData.forEach(item => {
-                output += `<li onclick="showDescription('${item.description}')">${item.name}</li>`;
-            });
-
-            output += '</ul>';
-
-            results.innerHTML = output;
-        }
-
-        function showDescription(description) {
-            const resultDetails = document.getElementById('resultDetails');
-            resultDetails.innerHTML = `<p>${description}</p>`;
-        }
-
-        // Add an event listener to the form to handle the search submission
-        document.querySelector('.form-search').addEventListener('submit', searchData);
-    </script>
-
+          <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
+            <input type="text" class="form-control" placeholder="ZIP code or CitY">
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
 
           <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
+
+            <div class="col-lg-3 col-6">
+              <div class="stats-item text-center w-100 h-100">
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Clients</p>
+              </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-6">
+              <div class="stats-item text-center w-100 h-100">
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Projects</p>
+              </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-6">
+              <div class="stats-item text-center w-100 h-100">
+                <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Support</p>
+              </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-6">
+              <div class="stats-item text-center w-100 h-100">
+                <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Workers</p>
+              </div>
+            </div><!-- End Stats Item -->
+
           </div>
         </div>
 
@@ -150,26 +142,41 @@
 
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
-            <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up">
-            <div class="icon flex-shrink-0"><img src="assets/img/sites/amazon.png" alt="Amazon Logo"></div>
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-cart-flatbed"></i></div>
             <div>
-                <h4 class="title">Amazon</h4>
-                <p class="description">Let's compare</p>
-                <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+              <h4 class="title">Lorem Ipsum</h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
             </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-truck"></i></div>
+            <div>
+              <h4 class="title">Dolor Sitema</h4>
+              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-truck-ramp-box"></i></div>
+            <div>
+              <h4 class="title">Sed ut perspiciatis</h4>
+              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
         </div>
 
-        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up">
-            <div class="icon flex-shrink-0"><img src="assets/img/sites/flipkart.png" alt="Flipkart Logo"></div>
-            <div>
-                <h4 class="title">Flipkart</h4>
-                <p class="description">Let's compare</p>
-                <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-        </div>
-
-
-      
+      </div>
     </section><!-- End Featured Services Section -->
 
     <!-- ======= About Us Section ======= -->
