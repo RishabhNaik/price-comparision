@@ -1,37 +1,15 @@
 <?php
-// Connect to your database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "price-comp";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'database.php'; // Include your database connection file
 
 // Fetch search term from GET request
 $searchTerm = $_GET['query'];
 
-// Prepare SQL statement to search for products
-$sql = "SELECT * FROM product WHERE name LIKE '%$searchTerm%'";
-$result = $conn->query($sql);
-
-// Store results in an array
-$products = array();
-
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $products[] = $row;
-    }
-}
-
-// Close database connection
-$conn->close();
+// Perform database query to search for products
+$stmt = $pdo->prepare("SELECT * FROM product WHERE name LIKE ?");
+$stmt->execute(["%$searchTerm%"]);
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // Return JSON response
 header('Content-Type: application/json');
-echo json_encode($products);
+echo json_encode($results);
 ?>
