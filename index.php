@@ -48,13 +48,6 @@
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href=#hero class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href=#services>Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-</ul>
-             
           
       </nav><!-- .navbar -->
 
@@ -148,7 +141,7 @@
 
   <main id="main">
 
-    <!-- ======= Featured Services Section ======= -->
+    <!-- ======= Featured Services Section ======= 
     <section id="featured-services" class="featured-services">
             <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up">
             <div class="icon flex-shrink-0"><img src="assets/img/sites/amazon.png" alt="Amazon Logo"></div>
@@ -170,9 +163,9 @@
 
 
       
-    </section><!-- End Featured Services Section -->
+    </section> End Featured Services Section -->
 
-    <!-- ======= About Us Section ======= -->
+    <!-- ======= About Us Section =======
     <section id="about" class="about pt-0">
       <div class="container" data-aos="fade-up">
 
@@ -213,7 +206,7 @@
         </div>
 
       </div>
-    </section><!-- End About Us Section -->
+    </section> End About Us Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="service" class="services pt-0">
@@ -232,7 +225,6 @@
               <div class="card-img">
                 <img src="assets/img/storage-service.jpg" alt="" class="img-fluid">
               </div>
-              <h3><a href="service-details.html" class="stretched-link">Storage</a></h3>
               <p>Cumque eos in qui numquam. Aut aspernatur perferendis sed atque quia voluptas quisquam repellendus temporibus itaqueofficiis odit</p>
             </div>
           </div><!-- End Card Item -->
@@ -257,42 +249,14 @@
             </div>
           </div><!-- End Card Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/trucking-service.jpg" alt="" class="img-fluid">
-              </div>
-              <h3><a href="service-details.html" class="stretched-link">Trucking</a></h3>
-              <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
-            </div>
-          </div><!-- End Card Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/packaging-service.jpg" alt="" class="img-fluid">
-              </div>
-              <h3><a href="service-details.html" class="stretched-link">Packaging</a></h3>
-              <p>Illo consequuntur quisquam delectus praesentium modi dignissimos facere vel cum onsequuntur maiores beatae consequatur magni voluptates</p>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/warehousing-service.jpg" alt="" class="img-fluid">
-              </div>
-              <h3><a href="service-details.html" class="stretched-link">Warehousing</a></h3>
-              <p>Quas assumenda non occaecati molestiae. In aut earum sed natus eatae in vero. Ab modi quisquam aut nostrum unde et qui est non quo nulla</p>
-            </div>
-          </div><!-- End Card Item -->
 
         </div>
 
       </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Call To Action Section ======= -->
+    <!-- ======= Call To Action Section ======= 
     <section id="call-to-action" class="call-to-action">
       <div class="container" data-aos="zoom-out">
 
@@ -305,9 +269,9 @@
         </div>
 
       </div>
-    </section><!-- End Call To Action Section -->
+    </section> End Call To Action Section -->
 
-    <!-- ======= Features Section ======= -->
+    <!-- ======= Features Section ======= -
     <section id="features" class="features">
       <div class="container">
 
@@ -328,7 +292,7 @@
               <li><i class="bi bi-check"></i> Ullam est qui quos consequatur eos accusamus.</li>
             </ul>
           </div>
-        </div><!-- Features Item -->
+        </div> Features Item --
 
         <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
           <div class="col-md-5 order-1 order-md-2">
@@ -346,7 +310,7 @@
               culpa qui officia deserunt mollit anim id est laborum
             </p>
           </div>
-        </div><!-- Features Item -->
+        </div> Features Item --
 
         <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
           <div class="col-md-5">
@@ -361,7 +325,7 @@
               <li><i class="bi bi-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
             </ul>
           </div>
-        </div><!-- Features Item -->
+        </div><!-- Features Item --
 
         <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
           <div class="col-md-5 order-1 order-md-2">
@@ -379,12 +343,12 @@
               culpa qui officia deserunt mollit anim id est laborum
             </p>
           </div>
-        </div><!-- Features Item -->
+        </div><Features Item -
 
       </div>
-    </section><!-- End Features Section -->
+    </section>< End Features Section -->
 
-    <!-- ======= Pricing Section ======= -->
+    <!-- ======= Pricing Section ======= -
     <section id="pricing" class="pricing pt-0">
       <div class="container" data-aos="fade-up">
 
@@ -409,7 +373,7 @@
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
-          </div><!-- End Pricing Item -->
+          </div>< End Pricing Item --
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="pricing-item featured">
@@ -424,8 +388,7 @@
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
-          </div><!-- End Pricing Item -->
-
+          </div><!-- End Pricing Item --
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
             <div class="pricing-item">
               <h3>Developer Plan</h3>
@@ -439,14 +402,14 @@
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
-          </div><!-- End Pricing Item -->
+          </div><!-- End Pricing Item --
 
         </div>
 
       </div>
     </section><!-- End Pricing Section -->
 
-    <!-- ======= Testimonials Section ======= -->
+    <!-- ======= Testimonials Section ======= -
     <section id="testimonials" class="testimonials">
       <div class="container">
 
@@ -467,7 +430,7 @@
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End testimonial item --
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -483,7 +446,7 @@
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End testimonial item --
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -499,7 +462,7 @@
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End testimonial item --
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -515,7 +478,7 @@
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End testimonial item --
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -538,9 +501,9 @@
         </div>
 
       </div>
-    </section><!-- End Testimonials Section -->
+    </section><!-- End Testimonials Section --
 
-    <!-- ======= Frequently Asked Questions Section ======= -->
+    <!-- ======= Frequently Asked Questions Section ======= --
     <section id="faq" class="faq">
       <div class="container" data-aos="fade-up">
 
@@ -567,7 +530,7 @@
                     Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
                   </div>
                 </div>
-              </div><!-- # Faq item-->
+              </div><!-- # Faq item--
 
               <div class="accordion-item">
                 <h3 class="accordion-header">
@@ -581,7 +544,7 @@
                     Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
                   </div>
                 </div>
-              </div><!-- # Faq item-->
+              </div><!-- # Faq item--
 
               <div class="accordion-item">
                 <h3 class="accordion-header">
@@ -595,7 +558,7 @@
                     Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
                   </div>
                 </div>
-              </div><!-- # Faq item-->
+              </div><!-- # Faq item--
 
               <div class="accordion-item">
                 <h3 class="accordion-header">
@@ -610,7 +573,7 @@
                     Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
                   </div>
                 </div>
-              </div><!-- # Faq item-->
+              </div><!-- # Faq item--
 
               <div class="accordion-item">
                 <h3 class="accordion-header">
@@ -624,7 +587,7 @@
                     Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
                   </div>
                 </div>
-              </div><!-- # Faq item-->
+              </div><!-- # Faq item--
 
             </div>
 
@@ -642,54 +605,7 @@
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span>Logis</span>
-          </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-          <div class="social-links d-flex mt-4">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>
-            A108 Adam Street <br>
-            New York, NY 535022<br>
-            United States <br><br>
-            <strong>Phone:</strong> +1 5589 55488 55<br>
-            <strong>Email:</strong> info@example.com<br>
-          </p>
-
-        </div>
-
-      </div>
-    </div>
+          
 
     <div class="container mt-4">
       <div class="copyright">
@@ -700,7 +616,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="https://bootstrapmade.com/">Rishab Nayak</a>
       </div>
     </div>
 
