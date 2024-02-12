@@ -1,10 +1,10 @@
-<?php include 'database.php';?>
+<?php include 'database.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Ecommerce Price Comparison Website</title>
   <meta content="" name="description">
@@ -17,15 +17,12 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Ecommerce</h1>
-      </a>
+            <a href="index.html" class="logo d-flex align-items-center">
+                <h1>Ecommerce</h1>
+            </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
@@ -115,13 +112,15 @@
     </section><!-- End Services Section -->
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
 
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-info">
-          
+                        <div class="container mt-4">
+                            <div class="copyright">
+                                &copy; Copyright <strong><span>Logis</span></strong>. All Rights Reserved
+                            </div>
+                            <div class="credits">
+                                Designed by <a href="https://bootstrapmade.com/">Rishab Nayak</a>
+                            </div>
+                        </div>
 
           <div class="container mt-4">
             <div class="copyright">
@@ -137,7 +136,7 @@
   </footer><!-- End Footer -->
   <!-- End Footer -->
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+        <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
 <?php include 'scripts.php';?>
