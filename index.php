@@ -1,4 +1,3 @@
-<?php include 'database.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,141 +5,131 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Ecommerce Price Comparison Website</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <title>Ecommerce Price Comparison Website</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-<?php include 'styles.php';?>
- 
-  
+    <?php include 'styles.php'; ?>
+
+
 </head>
 
 <body>
 
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <section id="hero" class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row gy-4 d-flex justify-content-between">
+                <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                    <h2 data-aos="fade-up">Ecommerce Price Comparison website Using Web Scrapping</h2>
+                    <p data-aos="fade-up" data-aos-delay="100">Price Comparison Tool : Here you can compare prices of a product on various e-commerce platforms.</p>
+                    <h1>Search in our dataset:</h1>
+                    <form id="searchForm" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
+                        <input type="text" id="searchInput" class="form-control" placeholder="enter product name">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
 
-            <a href="index.html" class="logo d-flex align-items-center">
-                <h1>Ecommerce</h1>
-            </a>
+                </div>
+                <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+                    <img src="assets/img/hero-img.svg" class="img-fluid mb-3 mb-lg-0" alt="">
+                </div>
 
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-      <nav id="navbar" class="navbar">
-          
-      </nav><!-- .navbar -->
-     
-    </div>
-  </header><!-- End Header -->
-  <!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center">
-    <div class="container">
-        <div class="row gy-4 d-flex justify-content-between">
-            <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                <h2 data-aos="fade-up">Ecommerce Price Comparison website Using Web Scrapping</h2>
-                <p data-aos="fade-up" data-aos-delay="100">Price Comparison Tool : Here you can compare prices of a product on various e-commerce platforms.</p>
-                <!DOCTYPE html>
-
-                <body>
-                <h1>Search in our dataset:</h1>
-                <form action="search.php" method="GET" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
-                  <input type="text" class="form-control" placeholder="ZIP code or CitY">
-                  <button type="submit" class="btn btn-primary">Search</button>
-                </form>
-
-
-                    
-
-
-                        <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
-                        </div>
             </div>
+            <p>Find the lowest price among the search results:</p>
+            <div id="minPriceResult"></div>
+        </div>
+    </section>
 
-            <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-                <img src="assets/img/hero-img.svg" class="img-fluid mb-3 mb-lg-0" alt="">
+    <main id="main">
+        <section id="service" class="services pt-0">
+            <div class="container" data-aos="fade-up">
+                <div class="section-header">
+                    <span>Stores</span>
+                    <h2>Stores</h2>
+                </div>
+                <div class="row gy-4" id="vendorCards">
+                    <div id="searchResults" class="row gy-4" data-aos="fade-up" data-aos-delay="400">
+                        <!-- Search results will be dynamically populated here -->
+                    </div>
+                </div>
             </div>
-
+        </section>
+    </main>
+    <div class="container mt-4">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Logis</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            Designed by <a href="https://bootstrapmade.com/">Rishab Nayak</a>
         </div>
     </div>
-</section>
 
-  <main id="main">
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <!-- ======= Services Section ======= -->
-    <section id="service" class="services pt-0">
-      <div class="container" data-aos="fade-up">
+    <div id="preloader"></div>
+    <?php include 'scripts.php'; ?>
 
-        <div class="section-header">
-          <span>Stores</span>
-          <h2>Stores</h2>
-        </div>
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let searchTerm = document.getElementById('searchInput').value;
+            fetch(`search.php?query=${encodeURIComponent(searchTerm)}`)
+                .then(response => {
+                    if (!response.ok) {
+                        console.log(response);
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data); // Log the data to see its structure
+                    if (Array.isArray(data)) {
+                        let searchResultsHtml = '';
+                        let minPrice = Number.MAX_VALUE;
+                        let minPriceVendor = '';
+                        data.forEach(product => {
+                            // Calculate the discount percentage
+                            let originalPrice = parseFloat(product.price);
+                            let discountedPrice = parseFloat(product.comp_price);
+                            let discountPercentage = ((originalPrice - discountedPrice) / originalPrice) * 100;
+                            discountPercentage = discountPercentage.toFixed(2); // Round to 2 decimal places
 
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" >
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/storage-service.png" alt="" class="img-fluid">
-              </div>
-              <p>Cumque eos in qui numquam. Aut aspernatur perferendis sed atque quia voluptas quisquam repellendus temporibus itaqueofficiis odit</p>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" >
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/croma.png" alt="" class="img-fluid">
-              </div>
-              <h3><a href="service-details.html" class="stretched-link">Logistics</a></h3>
-              <p>Asperiores provident dolor accusamus pariatur dolore nam id audantium ut et iure incidunt molestiae dolor ipsam ducimus occaecati nisi</p>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" >
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/cargo-service.jpg" alt="" class="img-fluid">
-              </div>
-              <h3><a href="service-details.html" class="stretched-link">Cargo</a></h3>
-              <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
-            </div>
-          </div><!-- End Card Item -->
-        </div>
-      </div>
-    </section><!-- End Services Section -->
-  </main><!-- End #main -->
-
-
-                        <div class="container mt-4">
-                            <div class="copyright">
-                                &copy; Copyright <strong><span>Logis</span></strong>. All Rights Reserved
+                            searchResultsHtml += `
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="${product.img_url}" alt="" class="img-fluid">
                             </div>
-                            <div class="credits">
-                                Designed by <a href="https://bootstrapmade.com/">Rishab Nayak</a>
-                            </div>
+                            <h3>${product.name}</h3>
+                            <p>Original Price: <del>${product.price}</del></p>
+                            <p>Discount: ${discountPercentage}%</p>
+                            <p>Vendor: ${product.vendor}</p>
+                            <p>Rating: ${product.rating}</p>
                         </div>
+                    </div>`;
 
-          <div class="container mt-4">
-            <div class="copyright">
-              &copy; Copyright <strong><span>Logis</span></strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-              Designed by Namratha NR
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-  <!-- End Footer -->
+                            // Update minimum price and corresponding vendor if applicable
+                            if (discountedPrice < minPrice) {
+                                minPrice = discountedPrice;
+                                minPriceVendor = product.vendor;
+                            }
+                        });
+                        document.getElementById('searchResults').innerHTML = searchResultsHtml;
 
-        <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <div id="preloader"></div>
-<?php include 'scripts.php';?>
-
+                        // Display minimum price and vendor
+                        document.getElementById('minPriceResult').innerHTML = `
+                        <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Lowest Price: ${minPrice}</h4>
+        <p>Vendor: ${minPriceVendor}</p>
+    </div>`;
+                    } else {
+                        console.error('Data received from server is not an array:', data);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        });
+    </script>
 
 </body>
 
